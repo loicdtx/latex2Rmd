@@ -1,0 +1,9 @@
+Package: latex2Rmd
+Type: Package
+Title: Converts latex R vignettes into markdown
+Version: 1.0
+Date: 2014-11-12
+Author: Loïc Dutrieux
+Maintainer: loic.dutrieux@gmail.com
+Description: Converts latex files written with sweave or knittr with chunks of R code embedded into markdown files for easy HTML export
+License: tbd
