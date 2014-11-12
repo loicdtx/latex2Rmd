@@ -6,13 +6,14 @@
 #' @param output character Filename of output file
 #' 
 #' @details I recommend to first transfer the content of the latex file to a RStudio Rmd template (removing headers, packages importts, etc) and then run the function.
+#' 
 #' What it doesn't do:
-#' \begin{itemize}
+#' \itemize{
 #'  \item Insert figures from external sources.
 #'  \item Differentiate ordered lists from unordered lists
 #'  \item Fix references to figures in the text
 #'  \item Adapt file headers and so on
-#' \end{itemize}
+#' }
 #' 
 #' @author Loic Dutrieux
 #' 
