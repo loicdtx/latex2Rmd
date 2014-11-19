@@ -19,6 +19,7 @@
 #' 
 #' @import stringr
 #' 
+#' @export
 
 latex2Rmd <- function(input, output) {
     text <- readChar(input, file.info(input)$size)
