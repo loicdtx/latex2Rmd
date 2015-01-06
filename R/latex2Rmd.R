@@ -31,13 +31,17 @@ latex2Rmd <- function(input, output) {
     text <- str_replace_all(string = text, pattern = '\\\\url\\{(.*?)\\}', replacement = '[\\1]')
     text <- str_replace_all(string = text, pattern = '\\\\code\\{(.*?)\\}', replacement = '`\\1`')
     text <- str_replace_all(string = text, pattern = '\\\\texttt\\{(.*?)\\}', replacement = '`\\1`')
+    text <- str_replace_all(string = text, pattern = '\\\\textbf\\{(.*?)\\}', replacement = '**\\1**')
     text <- str_replace_all(string = text, pattern = '\\\\emph\\{(.*?)\\}', replacement = '*\\1*')
     text <- str_replace_all(string = text, pattern = '\\\\textit\\{(.*?)\\}', replacement = '*\\1*')
     
     text <- str_replace_all(string = text, pattern = '\\\\section\\*?\\{(.*?)\\}', replacement = '# \\1')
     text <- str_replace_all(string = text, pattern = '\\\\subsection\\*?\\{(.*?)\\}', replacement = '## \\1')
     text <- str_replace_all(string = text, pattern = '\\\\subsubsection\\*?\\{(.*?)\\}', replacement = '### \\1')
+    text <- str_replace_all(string = text, pattern = '\\\\frametitle\\*?\\{(.*?)\\}', replacement = '# \\1')
+    text <- str_replace_all(string = text, pattern = '\\\\framesubtitle\\*?\\{(.*?)\\}', replacement = '## \\1')
     
+    text <- str_replace_all(string = text, pattern = '\\\\end\\{frame}', replacement = '---')
     
     text <- str_replace_all(string = text, pattern = '\\\\begin\\{(.*?)\\}', replacement = '')
     text <- str_replace_all(string = text, pattern = '\\\\end\\{(.*?)\\}', replacement = '')
