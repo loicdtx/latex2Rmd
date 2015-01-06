@@ -31,7 +31,6 @@ latex2Rmd <- function(input, output) {
     text <- str_replace_all(string = text, pattern = '\\\\url\\{(.*?)\\}', replacement = '[\\1]')
     text <- str_replace_all(string = text, pattern = '\\\\code\\{(.*?)\\}', replacement = '`\\1`')
     text <- str_replace_all(string = text, pattern = '\\\\texttt\\{(.*?)\\}', replacement = '`\\1`')
-    text <- str_replace_all(string = text, pattern = '\\\\textbf\\{(.*?)\\}', replacement = '`\\1`')
     text <- str_replace_all(string = text, pattern = '\\\\emph\\{(.*?)\\}', replacement = '*\\1*')
     text <- str_replace_all(string = text, pattern = '\\\\textit\\{(.*?)\\}', replacement = '*\\1*')
     
@@ -43,8 +42,6 @@ latex2Rmd <- function(input, output) {
     text <- str_replace_all(string = text, pattern = '\\\\begin\\{(.*?)\\}', replacement = '')
     text <- str_replace_all(string = text, pattern = '\\\\end\\{(.*?)\\}', replacement = '')
     text <- str_replace_all(string = text, pattern = '\\\\item', replacement = '*')
-    
-    text <- str_replace_all(string = text, pattern = '\\\\', replacement = '\\\n')
     
     text <- str_replace_all(string = text, pattern = '\\\r', replacement = '')
     
