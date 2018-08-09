@@ -3,7 +3,7 @@ Type: Package
 Title: Converts latex R vignettes into markdown
 Version: 1.0
 Date: 2014-11-12
-Author: Loïc Dutrieux
+Author: Loic Dutrieux
 Depends:
     R (>= 3.0.0),
     stringr
